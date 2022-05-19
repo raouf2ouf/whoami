@@ -7,43 +7,51 @@ import { SIZE_TO_MEDIA } from '@ionic/core/dist/collection/utils/media';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
-  public appPages: {title: string; url: string; icon: string; active: boolean}[] = [
+  public appPages: {
+    title: string;
+    url: string;
+    icon: string;
+    active: boolean;
+  }[] = [
     {
       title: 'About',
       url: '/about',
       icon: '',
-      active: true
-    }, {
+      active: true,
+    },
+    {
       title: 'Portfolio',
       url: '/portfolio',
       icon: '',
-      active: false
-    }, {
+      active: false,
+    },
+    {
       title: 'CV',
       url: '/CV',
       icon: '',
-      active: false
-    }, {
+      active: false,
+    },
+    {
       title: 'Personal Blog',
       url: '/blog',
       icon: '',
-      active: false
-    }
+      active: false,
+    },
   ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public toggleMenu(): void {
     const splitPane = document.querySelector('ion-split-pane');
-    if(splitPane && (window.matchMedia(SIZE_TO_MEDIA[splitPane.when] || splitPane.when))) {
+    if (
+      splitPane &&
+      window.matchMedia(SIZE_TO_MEDIA[splitPane.when] || splitPane.when)
+    ) {
       splitPane.classList.toggle('split-pane-visible');
     }
 
     window.dispatchEvent(new CustomEvent('resize'));
   }
-
 }

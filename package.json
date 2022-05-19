@@ -3,12 +3,15 @@
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
+  "description": "An Ionic project",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "lint:fix": "ng lint --fix",
+    "format": "prettier \"src/**/*.{js,ts,html,css,scss}\" --write",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -40,6 +43,8 @@
     "@angular/compiler-cli": "~13.2.2",
     "@angular/language-service": "~13.2.2",
     "@capacitor/cli": "3.5.1",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
     "@ionic/angular-toolkit": "^6.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
@@ -47,9 +52,12 @@
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
     "eslint": "^7.6.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.2",
@@ -58,9 +66,20 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "prettier": "^2.6.2",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.4.4"
   },
-  "description": "An Ionic project"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:fix",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
 }
