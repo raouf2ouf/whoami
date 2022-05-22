@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { MenuController, Platform } from '@ionic/angular';
 import { SIZE_TO_MEDIA } from '@ionic/core/dist/collection/utils/media';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage implements OnInit, AfterViewInit, OnDestroy {
   public appPages: {
     title: string;
     url: string;
@@ -16,42 +18,93 @@ export class HomePage implements OnInit {
     {
       title: 'About',
       url: '/about',
-      icon: '',
+      icon: 'information-circle',
       active: true,
     },
     {
-      title: 'Portfolio',
-      url: '/portfolio',
-      icon: '',
+      title: 'Experience',
+      url: '/experience',
+      icon: 'briefcase',
+      active: false,
+    },
+    {
+      title: 'skills',
+      url: '/skills',
+      icon: 'code-slash',
+      active: false,
+    },
+    {
+      title: 'projects',
+      url: '/skills',
+      icon: 'hammer',
+      active: false,
+    },
+    {
+      title: 'awards',
+      url: '/skills',
+      icon: 'ribbon',
+      active: false,
+    },
+    {
+      title: 'education',
+      url: '/skills',
+      icon: 'school',
+      active: false,
+    },
+    {
+      title: 'research',
+      url: '/skills',
+      icon: 'flask',
       active: false,
     },
     {
       title: 'CV',
       url: '/CV',
-      icon: '',
+      icon: 'print',
       active: false,
     },
     {
       title: 'Personal Blog',
       url: '/blog',
-      icon: '',
+      icon: 'enter',
       active: false,
     },
   ];
 
-  constructor() {}
+  smallSideMenu: boolean = false;
+  menuWidth: string = '370px';
 
-  ngOnInit() {}
+  subs: Subscription[] = [];
+
+  constructor(private plateform: Platform) {}
+
+  ngOnInit() {
+    this.subs.push(
+      this.plateform.resize.subscribe(async () => {
+        const width = this.plateform.width();
+        this.checkSize(width);
+      })
+    );
+  }
+
+  async ngAfterViewInit() {
+    const width = this.plateform.width();
+    this.checkSize(width);
+  }
 
   public toggleMenu(): void {
-    const splitPane = document.querySelector('ion-split-pane');
-    if (
-      splitPane &&
-      window.matchMedia(SIZE_TO_MEDIA[splitPane.when] || splitPane.when)
-    ) {
-      splitPane.classList.toggle('split-pane-visible');
-    }
+    this.smallSideMenu = !this.smallSideMenu;
+  }
 
-    window.dispatchEvent(new CustomEvent('resize'));
+  public checkSize(width: number) {
+    if (width < 768) {
+      this.smallSideMenu = true;
+      return;
+    }
+    this.smallSideMenu = false;
+  }
+
+  ngOnDestroy(): void {
+    this.subs.forEach((sub) => sub.unsubscribe());
   }
 }
