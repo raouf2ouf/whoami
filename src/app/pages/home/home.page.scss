@@ -208,8 +208,8 @@ ion-split-pane {
   display: flex;
   justify-content: center;
   ion-icon {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -224,7 +224,8 @@ ion-split-pane {
 }
 
 .seshtat {
-  width: 250px;
+  width: 200px;
+  height: 250px;
   border: 1px solid var(--ion-color-primary);
   padding: 8px;
   text-align: center;
