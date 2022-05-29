@@ -54,7 +54,7 @@
 
   <ion-content id="main">
     <div class="content">
-      <div class="section" id="home">
+      <!-- <div class="section" id="home">
         <div class="block">
           <div class="block-content">
             <p>Hello! my name is</p>
@@ -101,17 +101,109 @@
         <div class="block seshtat-mnemofy">
           <div class="seshtat">
             <div class="date">23rd Mars 2022</div>
-            <div class="score">-74pts (Awful)</div>
             <div class="state-icon">
               <ion-icon src="./assets/awful.svg"></ion-icon>
             </div>
+            <div class="progress">
+              <div class="indicator"></div>
+            </div>
             <div class="activities">
               <div class="activity">
-                <div><span>-</span> Smoking less than 15 (19)</div>
-                <div><span>-</span> Workout at least 25% (0%)</div>
-                <div><span>-</span> [Encrypted] (12)</div>
-                <div><span>-</span> [Encrypted] (0)</div>
-                <div><span>+</span> Spend less than 25 (12€)</div>
+                <div class="neg">- Smoking less than 15 (19)</div>
+                <div class="neg">- Workout at least 25% (0%)</div>
+                <div class="neg">- [Encrypted] (12)</div>
+                <div class="neg">- [Encrypted] (0)</div>
+                <div class="pos">+ Spend less than 25€ (12€)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="section" id="skills">
+        <div class="title">Skills & Experience</div>
+        <div class="block">
+          <div class="sub-title">Front-End</div>
+          <div class="skills">
+            <div class="skill" *ngFor="let skill of skills.front">
+              <img [src]="skill.src" />
+              <div>{{skill.title}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="sub-title">Back-End</div>
+          <div class="skills">
+            <div class="skill" *ngFor="let skill of skills.back">
+              <img [src]="skill.src" />
+              <div>{{skill.title}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="sub-title">Blockchain</div>
+          <div class="skills">
+            <div class="skill" *ngFor="let skill of skills.smart">
+              <img [src]="skill.src" />
+              <div>{{skill.title}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="sub-title">Data</div>
+          <div class="skills">
+            <div class="skill" *ngFor="let skill of skills.data">
+              <img [src]="skill.src" />
+              <div>{{skill.title}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="sub-title">Ops</div>
+          <div class="skills">
+            <div class="skill" *ngFor="let skill of skills.ops">
+              <img [src]="skill.src" />
+              <div>{{skill.title}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline" *ngFor="let instance of timeline">
+          <div class="time">
+            <div class="dates">
+              <span class="start">{{instance.start}}</span> -
+              <span class="end">{{instance.end}}</span>
+            </div>
+            <img src="" />
+          </div>
+          <div class="timeline-content">
+            <div class="global-info">
+              <div class="timeline-title">{{instance.title}}</div>
+
+              <div class="company-location">
+                <div class="company">
+                  <span>{{instance.company}}</span>
+                </div>
+                <div class="location">
+                  <ion-icon name="location"></ion-icon>
+                  <span>{{instance.location}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="description-skills">
+              <div class="description">
+                <p>{{instance.description}}</p>
+                <div class="item" *ngFor="let item of instance.items">
+                  <div>
+                    <ion-icon name="caret-forward"></ion-icon>
+                  </div>
+                  <div>{{item}}</div>
+                </div>
+              </div>
+              <div class="skills">
+                <div class="skill" *ngFor="let skill of instance.skills">
+                  <img [src]="skill.src" />
+                  <!-- <div>{{skill.title}}</div> -->
+                </div>
               </div>
             </div>
           </div>

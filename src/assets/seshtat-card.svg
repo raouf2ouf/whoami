@@ -5,8 +5,9 @@ width="200px" height="250px"
 
     version="1.1"
 >
-   <path fill="none" stroke="#4fc2dd" stroke-width="2"
-   d="M1 1 H25 L30 20 H170 L175 1 H199 V249 H160 L155 230 H45 L40 249 H0 z" />
-   <path fill="#4fc2dd" stroke="none" d="M25 0 L30 20 H170 L 175 0 z" />
-   <path fill="#4fc2dd" stroke="none" d="M160 250 L155 230 H45 L40 250 z" />
+   <path fill="#112240" stroke="#4fc2dd" stroke-width="2"
+   d="M1 1 H25 L30 15 H170 L175 1 H199 V249 H1 z" />
+   <path fill="#4fc2dd" stroke="none" d="M25 0 L30 15 H170 L 175 0 z" />
+   <!-- <path fill="none" stroke-width="2" stroke="#4fc2dd" d="M110 250 L155 235 H45 L40 250 z" /> -->
+   <path fill="none" stroke-width="2" stroke="#4fc2dd" d="M0 120 H40 L45 105 H155 L160 120 H200" />
 </svg>
