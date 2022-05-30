@@ -171,6 +171,7 @@ ion-split-pane {
       .sub-title {
         color: var(--ion-color-white);
         font-size: 18px;
+        margin-right: 8px;
       }
       p {
         padding: 8px;
@@ -188,14 +189,28 @@ ion-split-pane {
         align-items: center;
       }
 
-      .skills {
+      .skills-block {
+        margin: 10px 0px;
+        flex: 1;
         display: flex;
+        flex-direction: column;
+        .sub-title {
+          text-align: center;
+        }
+      }
+      .skills {
+        flex: 1;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
         .skill {
+          margin: 8px;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           img {
+            object-fit: contain;
             width: 40px;
             height: 40px;
           }
@@ -330,7 +345,7 @@ ion-split-pane {
     .description-skills {
       display: flex;
       .description {
-        flex: 3;
+        flex: 5;
         .item {
           padding: 2px 0px;
           display: flex;
@@ -341,6 +356,16 @@ ion-split-pane {
       }
       .skills {
         flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 8px;
+        justify-content: space-between;
+        .skill {
+          margin: 4px 4px;
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+        }
       }
     }
   }

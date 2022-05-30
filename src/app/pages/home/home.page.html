@@ -6,14 +6,14 @@
           <ion-icon name="menu-sharp" slot="icon-only"></ion-icon>
         </ion-button>
         <div class="infos">
-          <div class="image">
+          <!-- <div class="image">
             <img src="./assets/me.jpg" />
           </div>
           <div class="name">
             <span class="firstname">Abdel</span
             ><span class="middlename">raouf</span>
             <span class="lastname"> HECHAM</span>
-          </div>
+          </div> -->
           <div class="title">
             Fullstack <span class="techno">Web/Solidity</span>
             Developer
@@ -121,52 +121,68 @@
       </div> -->
 
       <div class="section" id="skills">
-        <div class="title">Skills & Experience</div>
+        <div class="title">Skills</div>
         <div class="block">
-          <div class="sub-title">Front-End</div>
-          <div class="skills">
-            <div class="skill" *ngFor="let skill of skills.front">
-              <img [src]="skill.src" />
-              <div>{{skill.title}}</div>
+          <div class="skills-block">
+            <div class="sub-title">Front-End</div>
+            <div class="skills">
+              <div class="skill" *ngFor="let skill of skills.front">
+                <img [src]="skill.src" />
+                <div>{{skill.title}}</div>
+                <div>{{skill.subtitle}}</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="block">
-          <div class="sub-title">Back-End</div>
-          <div class="skills">
-            <div class="skill" *ngFor="let skill of skills.back">
-              <img [src]="skill.src" />
-              <div>{{skill.title}}</div>
+          <div class="skills-block">
+            <div class="sub-title">Back-End</div>
+            <div class="skills">
+              <div class="skill" *ngFor="let skill of skills.back">
+                <img [src]="skill.src" />
+                <div>{{skill.title}}</div>
+                <div>{{skill.subtitle}}</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="block">
-          <div class="sub-title">Blockchain</div>
-          <div class="skills">
-            <div class="skill" *ngFor="let skill of skills.smart">
-              <img [src]="skill.src" />
-              <div>{{skill.title}}</div>
+          <div class="skills-block">
+            <div class="sub-title">Blockchain</div>
+            <div class="skills">
+              <div class="skill" *ngFor="let skill of skills.smart">
+                <img [src]="skill.src" />
+                <div>{{skill.title}}</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="block">
-          <div class="sub-title">Data</div>
-          <div class="skills">
-            <div class="skill" *ngFor="let skill of skills.data">
-              <img [src]="skill.src" />
-              <div>{{skill.title}}</div>
+          <div class="skills-block">
+            <div class="sub-title">Data</div>
+            <div class="skills">
+              <div class="skill" *ngFor="let skill of skills.data">
+                <img [src]="skill.src" />
+                <div>{{skill.title}}</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="block">
-          <div class="sub-title">Ops</div>
-          <div class="skills">
-            <div class="skill" *ngFor="let skill of skills.ops">
-              <img [src]="skill.src" />
-              <div>{{skill.title}}</div>
+          <div class="skills-block">
+            <div class="sub-title">Ops</div>
+            <div class="skills">
+              <div class="skill" *ngFor="let skill of skills.ops">
+                <img [src]="skill.src" />
+                <div>{{skill.title}}</div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="section" id="experience">
+        <div class="title">Experience</div>
         <div class="timeline" *ngFor="let instance of timeline">
           <div class="time">
             <div class="dates">
@@ -201,7 +217,7 @@
               </div>
               <div class="skills">
                 <div class="skill" *ngFor="let skill of instance.skills">
-                  <img [src]="skill.src" />
+                  <img [src]="skill" />
                   <!-- <div>{{skill.title}}</div> -->
                 </div>
               </div>

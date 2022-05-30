@@ -16,21 +16,27 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
     active: boolean;
   }[] = [
     {
-      title: 'About',
-      url: '/about',
-      icon: 'information-circle',
+      title: 'Home',
+      url: '/home',
+      icon: 'home',
       active: true,
     },
     {
-      title: 'Experience',
-      url: '/experience',
-      icon: 'briefcase',
+      title: 'About',
+      url: '/about',
+      icon: 'information-circle',
       active: false,
     },
     {
       title: 'skills',
       url: '/skills',
       icon: 'code-slash',
+      active: false,
+    },
+    {
+      title: 'Experience',
+      url: '/experience',
+      icon: 'briefcase',
       active: false,
     },
     {
@@ -45,12 +51,12 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
       icon: 'ribbon',
       active: false,
     },
-    {
-      title: 'education',
-      url: '/skills',
-      icon: 'school',
-      active: false,
-    },
+    // {
+    //   title: 'education',
+    //   url: '/skills',
+    //   icon: 'school',
+    //   active: false,
+    // },
     {
       title: 'research',
       url: '/skills',
@@ -75,11 +81,26 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
     {
       start: 2019,
       end: 2022,
-      title: 'Data Engineer',
+      title: 'Senior Data Engineer',
       company: 'Business & Decision',
       location: 'Montpellier, France',
       description: '',
       items: ['potato', 'boy'],
+      skills: [
+        './assets/img/ionic.png',
+        './assets/img/react.png',
+        './assets/img/talend.png',
+        './assets/img/tableau.png',
+        './assets/img/apache.png',
+        './assets/img/qlik.png',
+        './assets/img/oracle.png',
+        './assets/img/mongodb.png',
+        './assets/img/postgresql.png',
+        './assets/img/tensorflow.png',
+        './assets/img/docker.png',
+        './assets/img/git.png',
+        './assets/img/npm.png',
+      ],
     },
     {
       start: 2018,
@@ -95,14 +116,17 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
         'Implemented Angular Front-end with graph visualization and interaction featurs.',
       ],
       skills: [
-        {
-          src: 'logo-ionic',
-          title: 'Ionic',
-        },
-        {
-          src: 'logo-tux',
-          title: 'Linux',
-        },
+        './assets/img/ionic.png',
+        './assets/img/angular.png',
+        './assets/img/capacitor.png',
+        './assets/img/nodejs.png',
+        './assets/img/spring.png',
+        './assets/img/mongodb.png',
+        './assets/img/tensorflow.png',
+        './assets/img/docker.png',
+        './assets/img/maven.png',
+        './assets/img/git.png',
+        './assets/img/npm.png',
       ],
     },
   ];
@@ -115,15 +139,18 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
       },
       {
         src: './assets/img/angular.png',
-        title: 'Angular (Typescript)',
+        title: 'Angular',
+        subtitle: '(Typescript)',
       },
       {
         src: './assets/img/react.png',
-        title: 'React (Javascript)',
+        title: 'React',
+        subtitle: '(Javascript)',
       },
       {
         src: './assets/img/capacitor.png',
-        title: 'Capacitor (Android)',
+        title: 'Capacitor',
+        subtitle: '(Android)',
       },
     ],
     back: [
@@ -133,11 +160,13 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
       },
       {
         src: './assets/img/flask.png',
-        title: 'Flask (Python)',
+        title: 'Flask',
+        subtitle: '(Python)',
       },
       {
         src: './assets/img/spring.png',
-        title: 'Spring (Java)',
+        title: 'Spring',
+        subtitle: '(Java)',
       },
     ],
     smart: [
@@ -152,11 +181,11 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
     ],
     data: [
       {
-        src: './assets/img/mogodb.png',
+        src: './assets/img/mongodb.png',
         title: 'Mongodb',
       },
       {
-        src: './assets/img/postgres.png',
+        src: './assets/img/postgresql.png',
         title: 'Postgres',
       },
       {
@@ -168,7 +197,7 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
         title: 'TensorFlow',
       },
       {
-        src: './assets/img/spark.png',
+        src: './assets/img/apache.png',
         title: 'Apache Spark',
       },
       {
