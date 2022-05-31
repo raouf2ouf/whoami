@@ -19,65 +19,67 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
   }[] = [
     {
       title: 'Home',
-      url: '/home',
+      url: 'home',
       icon: 'home',
-      active: true,
+      active: false,
     },
     {
       title: 'About',
-      url: '/about',
+      url: 'about',
       icon: 'information-circle',
       active: false,
     },
     {
       title: 'skills',
-      url: '/skills',
+      url: 'skills',
       icon: 'code-slash',
       active: false,
     },
     {
       title: 'Experience',
-      url: '/experience',
+      url: 'experience',
       icon: 'briefcase',
       active: false,
     },
-    {
-      title: 'projects',
-      url: '/skills',
-      icon: 'hammer',
-      active: false,
-    },
-    {
-      title: 'awards',
-      url: '/skills',
-      icon: 'ribbon',
-      active: false,
-    },
+    // {
+    //   title: 'projects',
+    //   url: 'projects',
+    //   icon: 'hammer',
+    //   active: false,
+    // },
+    // {
+    //   title: 'awards',
+    //   url: '/skills',
+    //   icon: 'ribbon',
+    //   active: false,
+    // },
     // {
     //   title: 'education',
     //   url: '/skills',
     //   icon: 'school',
     //   active: false,
     // },
-    {
-      title: 'research',
-      url: '/skills',
-      icon: 'flask',
-      active: false,
-    },
-    {
-      title: 'CV',
-      url: '/CV',
-      icon: 'print',
-      active: false,
-    },
-    {
-      title: 'Personal Blog',
-      url: '/blog',
-      icon: 'enter',
-      active: false,
-    },
+    // {
+    //   title: 'research',
+    //   url: '/skills',
+    //   icon: 'flask',
+    //   active: false,
+    // },
+    // {
+    //   title: 'CV',
+    //   url: '/CV',
+    //   icon: 'print',
+    //   active: false,
+    // },
+    // {
+    //   title: 'Personal Blog',
+    //   url: '/blog',
+    //   icon: 'enter',
+    //   active: false,
+    // },
   ];
+
+  private previousActive: number = 0;
 
   public timeline = timeline;
 
@@ -113,6 +115,16 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
       return;
     }
     this.smallSideMenu = false;
+  }
+
+  public onVisible(id: number) {
+    this.appPages[this.previousActive].active = false;
+    this.appPages[id].active = true;
+    this.previousActive = id;
+  }
+
+  public navigateTo(page: string) {
+    document.getElementById(page).scrollIntoView({ behavior: 'smooth' });
   }
 
   ngOnDestroy(): void {

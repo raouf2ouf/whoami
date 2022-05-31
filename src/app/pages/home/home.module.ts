@@ -8,8 +8,10 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 
+import { ObserveVisibilityDirective } from '../../directives/observe-visibility.directive';
+
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
-  declarations: [HomePage],
+  declarations: [HomePage, ObserveVisibilityDirective],
 })
 export class HomePageModule {}

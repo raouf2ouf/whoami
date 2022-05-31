@@ -6,14 +6,14 @@
           <ion-icon name="menu-sharp" slot="icon-only"></ion-icon>
         </ion-button>
         <div class="infos">
-          <!-- <div class="image">
+          <div class="image">
             <img src="./assets/me.jpg" />
           </div>
           <div class="name">
             <span class="firstname">Abdel</span
             ><span class="middlename">raouf</span>
             <span class="lastname"> HECHAM</span>
-          </div> -->
+          </div>
           <div class="title">
             Fullstack <span class="techno">Web/Solidity</span>
             Developer
@@ -25,6 +25,7 @@
             button
             *ngFor="let page of appPages"
             [class.active]="page.active"
+            (click)="navigateTo(page.url)"
           >
             <ion-icon [name]="page.icon"></ion-icon>
             <ion-label>{{ page.title }}</ion-label>
@@ -54,10 +55,12 @@
 
   <ion-content id="main">
     <div class="content">
-      <!-- <div class="section" id="home">
+      <div class="section" id="home">
+        <div class="title" observeVisibility (visible)="onVisible(0)">
+          Hello! my name is
+        </div>
         <div class="block">
           <div class="block-content">
-            <p>Hello! my name is</p>
             <p class="name">Abdel<em>raouf</em> Hecham</p>
             <p class="subtext">I extract actionable insights from data.</p>
             <p>
@@ -65,7 +68,7 @@
               Artificial Intelligence. I specialize in building solutions at the
               intersection of three domains: <em>Web Developement</em>,
               <em>Data Engineering</em>, and <em>Smart Contracts</em>. While my
-              core skills are <em>web-focused</em> (7+ years of experience), I
+              core skills are <em>web-focused</em> (6+ years of experience), I
               currently work as a <em>Data Engineer</em> (4+ years) whilst
               slowling pivoting to <em>Blockchain</em> technology (1~ year).
             </p>
@@ -76,7 +79,9 @@
         </div>
       </div>
       <div class="section" id="about">
-        <div class="title">About me</div>
+        <div class="title" observeVisibility (visible)="onVisible(1)">
+          About me
+        </div>
         <div class="block">
           <div class="block-content">
             <p>
@@ -118,10 +123,12 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
       <div class="section" id="skills">
-        <div class="title">Skills</div>
+        <div class="title" observeVisibility (visible)="onVisible(2)">
+          Skills
+        </div>
         <div class="block">
           <div class="skills-block">
             <div class="sub-title">Front-End</div>
@@ -182,7 +189,9 @@
       </div>
 
       <div class="section" id="experience">
-        <div class="title">Experience</div>
+        <div class="title" observeVisibility (visible)="onVisible(3)">
+          Experience
+        </div>
         <div class="timeline" *ngFor="let instance of timeline">
           <div class="time">
             <div class="dates">

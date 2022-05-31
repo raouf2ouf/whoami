@@ -72,6 +72,7 @@ ion-split-pane {
           --inner-border-width: 0px;
           &.active {
             --color: var(--ion-color-primary);
+            --background: var(--ion-color-primary-opacity);
             ion-icon {
               color: var(--ion-color-primary);
             }
@@ -231,6 +232,16 @@ ion-split-pane {
     font-size: 30px;
     line-height: normal;
   }
+
+  @media (max-width: 576px) {
+    // word-break: break-all;
+    .name {
+      font-size: 40px;
+    }
+    .subtext {
+      font-size: 25px;
+    }
+  }
 }
 
 .image {
@@ -346,8 +357,14 @@ ion-split-pane {
       display: flex;
       .description {
         flex: 5;
+        line-height: 24px;
+        font-size: 14px;
+        p {
+          margin: 2px 0px;
+        }
         .item {
           padding: 2px 0px;
+          line-height: 24px;
           display: flex;
           ion-icon {
             font-size: 12px;
