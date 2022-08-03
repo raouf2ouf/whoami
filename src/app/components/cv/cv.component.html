@@ -1,0 +1,156 @@
+<div id="download">
+  <app-download-cv></app-download-cv>
+  <!-- <a
+    href="./assets/documents/cv-hecham-en.pdf"
+    download="cv-hecham-en.pdf"
+    class="nav"
+    ><em>[</em><span>Download CV English</span><em>]</em></a
+  >
+  <a
+    href="./assets/documents/cv-hecham-fr.pdf"
+    download="cv-hecham-fr.pdf"
+    class="nav"
+    ><em>[</em><span>Download CV French</span><em>]</em></a
+  > -->
+</div>
+
+<div id="container" *ngFor="let info of infos" class="hide-lg">
+  <div id="sidebar">
+    <h1>Abdel<span>raouf</span> <br />HECHAM</h1>
+    <h2>
+      {{ info.title }}
+    </h2>
+    <div id="info">
+      <div class="info">
+        <i class="material-icons">phone</i>
+        <span>(+33) 6 50 84 29 62</span>
+      </div>
+      <div class="info">
+        <i class="material-icons">public</i>
+        <span>raouf-hecham.com</span>
+      </div>
+      <div class="info">
+        <i class="material-icons">email</i>
+        <span>raouf.hec@gmail.com</span>
+      </div>
+      <div class="info">
+        <i class="material-icons">location_on</i>
+        <span>Montpellier, France</span>
+      </div>
+
+      <div class="content">
+        <div>
+          <h3>{{ info.profile.title }}</h3>
+          <div class="block-content profile">
+            {{ info.profile.content }} <span>{{ info.profile.web }}</span
+            >, <span>{{ info.profile.data }}</span> {{ info.profile.link }}
+            <span>{{ info.profile.blockchain }}</span
+            >.
+          </div>
+        </div>
+
+        <div>
+          <h3>{{ info.skills }}</h3>
+          <div class="block-content skills">
+            <div>Python (Keras, Flask)</div>
+            <div>SQL (Oracle, Postgres)</div>
+            <div>NoSQL (MongoDB, Hbase)</div>
+            <div>ETL (Hadoop, Talend)</div>
+            <div>BI (Tableau, Qlik)</div>
+            <div>AWS (S3)</div>
+            <div>Java (Spring)</div>
+            <div>Typescript (Angular, Ionic)</div>
+            <div>Android (Kotlin)</div>
+            <div>Solidity</div>
+            <div>Git</div>
+            <div>Docker</div>
+            <div>Agile</div>
+          </div>
+        </div>
+
+        <div>
+          <h3>{{ info.languages.title }}</h3>
+          <div class="block-content">
+            <ul>
+              <li *ngFor="let lang of info.languages.langs">
+                {{ lang }}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- <div>
+          <h3>{{ info.philosophy.title }}</h3>
+          <div class="block-content">
+            {{ info.philosophy.beforeQuote }}
+            <q>{{ info.philosophy.quote }}</q
+            >.
+            {{ info.philosophy.afterQuote }}
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <div>
+      <h3>{{ info.experience.title }}</h3>
+      <div class="block-content" *ngFor="let exp of info.experience.exps">
+        <h4>{{ exp.position }}</h4>
+        <div class="location-and-time">
+          <h5>{{ exp.place }}</h5>
+          <div class="time">
+            <i class="material-icons">date_range</i>
+            <span>{{ exp.time }}</span>
+          </div>
+          <div class="location">
+            <i class="material-icons">location_on</i>
+            <span>{{ exp.location }}</span>
+          </div>
+        </div>
+        <span>{{ exp.description }}</span>
+        <ul>
+          <li *ngFor="let item of exp.items">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h3>{{ info.education.title }}</h3>
+      <div class="block-content" *ngFor="let edu of info.education.edus">
+        <h4 *ngIf="!edu.more">{{ edu.position }}</h4>
+        <div class="title" *ngIf="edu.more">
+          <h4>{{ edu.position }}</h4>
+          <div>{{ edu.more }}</div>
+        </div>
+        <div class="location-and-time">
+          <h5>{{ edu.place }}</h5>
+          <div class="time">
+            <i class="material-icons">date_range</i>
+            <span>{{ edu.time }}</span>
+          </div>
+          <div class="location">
+            <i class="material-icons">location_on</i>
+            <span>{{ edu.location }}</span>
+          </div>
+        </div>
+        <span>
+          {{ edu.description }}
+        </span>
+      </div>
+    </div>
+
+    <div>
+      <h3>{{ info.awards.title }}</h3>
+      <div class="block-content">
+        <ul>
+          <li *ngFor="let aw of info.awards.aws">
+            <em>{{ aw.title }}</em>
+            {{ aw.desc }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

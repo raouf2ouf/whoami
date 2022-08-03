@@ -52,6 +52,7 @@ ion-split-pane {
         }
         .title {
           // text-transform: uppercase;
+          text-align: center;
           font-size: 18px;
           color: var(--ion-color-white-shade);
           .techno {
@@ -327,6 +328,11 @@ ion-split-pane {
     width: 100px;
     margin-top: 16px;
     border-right: 1px solid var(--ion-color-primary);
+    text-align: center;
+    .dates {
+    }
+    .years {
+    }
   }
   .timeline-content {
     margin-left: 8px;

@@ -4,6 +4,7 @@ import { SIZE_TO_MEDIA } from '@ionic/core/dist/collection/utils/media';
 import { Subscription } from 'rxjs';
 import { timeline } from 'src/app/data/experience';
 import { skills } from 'src/app/data/skills';
+import moment from 'moment';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ import { skills } from 'src/app/data/skills';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit, AfterViewInit, OnDestroy {
+  currentDate = moment().format('DD MMM YYYY');
   public appPages: {
     title: string;
     url: string;
@@ -65,12 +67,12 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
     //   icon: 'flask',
     //   active: false,
     // },
-    // {
-    //   title: 'CV',
-    //   url: '/CV',
-    //   icon: 'print',
-    //   active: false,
-    // },
+    {
+      title: 'CV',
+      url: 'CV',
+      icon: 'print',
+      active: false,
+    },
     // {
     //   title: 'Personal Blog',
     //   url: '/blog',
@@ -124,10 +126,15 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public navigateTo(page: string) {
+    console.log(page);
     document.getElementById(page).scrollIntoView({ behavior: 'smooth' });
   }
 
   ngOnDestroy(): void {
     this.subs.forEach((sub) => sub.unsubscribe());
+  }
+
+  goToLink(url: string) {
+    window.open(url, '_blank');
   }
 }

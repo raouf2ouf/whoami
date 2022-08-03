@@ -44,6 +44,11 @@ $screen-breakpoints: (
       display: none !important;
     }
   }
+  .show-#{$size} {
+    @media (min-width: $size-value) {
+      display: none !important;
+    }
+  }
 }
 
 .hide-max {

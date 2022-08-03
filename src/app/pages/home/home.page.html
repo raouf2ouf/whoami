@@ -1,5 +1,5 @@
 <ion-split-pane contentId="main" [class.small]="smallSideMenu" when="xs">
-  <ion-menu contentId="main">
+  <ion-menu contentId="main" class="hide-sm">
     <ion-content>
       <div class="menu-container">
         <ion-button fill="clear" (click)="toggleMenu()">
@@ -15,7 +15,8 @@
             <span class="lastname"> HECHAM</span>
           </div>
           <div class="title">
-            Fullstack <span class="techno">Web/Solidity</span>
+            Senior <span class="techno">Data Engineer</span> and Fullstack
+            <span class="techno">Web/Solidity</span>
             Developer
           </div>
         </div>
@@ -33,19 +34,28 @@
         </div>
 
         <div class="contact">
-          <ion-button fill="clear">
+          <!-- <ion-button fill="clear">
             <ion-icon slot="icon-only" name="mail"></ion-icon>
-          </ion-button>
-          <ion-button fill="clear">
+          </ion-button> -->
+          <ion-button
+            fill="clear"
+            (click)="goToLink('https://github.com/raoufhec')"
+          >
             <ion-icon slot="icon-only" name="logo-github"></ion-icon>
           </ion-button>
-          <ion-button fill="clear">
+          <ion-button
+            fill="clear"
+            (click)="goToLink('https://www.linkedin.com/in/abdelraouf-hecham/')"
+          >
             <ion-icon slot="icon-only" name="logo-linkedin"></ion-icon>
           </ion-button>
-          <ion-button fill="clear">
-            <ion-icon slot="icon-only" name="logo-youtube"></ion-icon>
+          <ion-button
+            fill="clear"
+            (click)="goToLink('https://stackoverflow.com/users/5202808/a-hecham')"
+          >
+            <ion-icon slot="icon-only" name="logo-stackoverflow"></ion-icon>
           </ion-button>
-          <ion-button fill="clear">
+          <ion-button fill="clear" (click)="goToLink('')">
             <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
           </ion-button>
         </div>
@@ -105,7 +115,7 @@
         </div>
         <div class="block seshtat-mnemofy">
           <div class="seshtat">
-            <div class="date">23rd Mars 2022</div>
+            <div class="date">{{ currentDate }}</div>
             <div class="state-icon">
               <ion-icon src="./assets/awful.svg"></ion-icon>
             </div>
@@ -116,7 +126,7 @@
               <div class="activity">
                 <div class="neg">- Smoking less than 15 (19)</div>
                 <div class="neg">- Workout at least 25% (0%)</div>
-                <div class="neg">- [Encrypted] (12)</div>
+                <div class="neg">- [Encrypted] (3)</div>
                 <div class="neg">- [Encrypted] (0)</div>
                 <div class="pos">+ Spend less than 25€ (12€)</div>
               </div>
@@ -192,12 +202,16 @@
         <div class="title" observeVisibility (visible)="onVisible(3)">
           Experience
         </div>
+
+        <app-download-cv></app-download-cv>
+
         <div class="timeline" *ngFor="let instance of timeline">
-          <div class="time">
+          <div class="time hide-sm">
             <div class="dates">
               <span class="start">{{instance.start}}</span> -
               <span class="end">{{instance.end}}</span>
             </div>
+            <div class="years">{{instance.years}}</div>
             <img src="" />
           </div>
           <div class="timeline-content">
@@ -207,6 +221,9 @@
               <div class="company-location">
                 <div class="company">
                   <span>{{instance.company}}</span>
+                  <div class="show-sm">
+                    {{instance.start}} - {{instance.end}}
+                  </div>
                 </div>
                 <div class="location">
                   <ion-icon name="location"></ion-icon>
@@ -227,12 +244,18 @@
               <div class="skills">
                 <div class="skill" *ngFor="let skill of instance.skills">
                   <img [src]="skill" />
-                  <!-- <div>{{skill.title}}</div> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="section" id="CV">
+        <div class="title" observeVisibility (visible)="onVisible(4)">
+          Resume (English/French)
+        </div>
+        <app-cv></app-cv>
       </div>
     </div>
   </ion-content>
