@@ -1,0 +1,77 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="200px"
+    height="200px"
+    viewBox="0 0 150 150"
+    version="1.1"
+>
+    <defs>
+    <pattern
+        x="0"
+        y="0"
+        width="4"
+        height="4"
+        patternUnits="userSpaceOnUse"
+        id="grid"
+    >
+        <rect width="4" height="4" fill="#4dd5dd50"></rect>
+        <line x1="0" y1="0" x2="4" y2="0" stroke="#4dd5dd"></line>
+        <line x1="0" y1="4" x2="4" y2="4" stroke="#4dd5dd"></line>
+        <line x1="0" y1="0" x2="0" y2="4" stroke="#4dd5dd"></line>
+        <line x1="4" y1="0" x2="4" y2="4" stroke="#4dd5dd"></line>
+    </pattern>
+    </defs>
+    <circle
+    id="web"
+    stroke-width="1"
+    stroke="#36abe0"
+    fill="#36abe050"
+    cx="54"
+    cy="80"
+    r="53"
+    />
+    <circle
+    id="data"
+    stroke-width="1"
+    stroke="#4dd5dd"
+    fill="#4dd5dd50"
+    cx="100"
+    cy="41"
+    r="40"
+    />
+    <circle
+    id="smart"
+    stroke-width="1"
+    stroke="#64ffda"
+    fill="#64ffda50"
+    cx="119"
+    cy="90"
+    r="30"
+    />
+    <text style="font-size: 9px" fill="#ccd6f6">
+    <tspan text-anchor="middle" x="40" y="74">Web</tspan>
+    <tspan text-anchor="middle" x="40" y="85">Developement</tspan>
+    <tspan text-anchor="middle" x="40" y="96" style="font-size: 7px">
+        (6+ years)
+    </tspan>
+    </text>
+    <text style="font-size: 9px" fill="#ccd6f6">
+    <tspan text-anchor="middle" x="100" y="16">Data</tspan>
+    <tspan text-anchor="middle" x="100" y="27">Engineering</tspan>
+    <tspan text-anchor="middle" x="110" y="38" style="font-size: 7px">
+        (4+ years)
+    </tspan>
+    </text>
+    <text style="font-size: 7px" fill="#ccd6f6">
+    <tspan text-anchor="middle" x="125" y="88">Smart</tspan>
+    <tspan text-anchor="middle" x="125" y="97">Contracts</tspan>
+    <tspan text-anchor="middle" x="125" y="106">(1~ years)</tspan>
+    </text>
+    <path
+    fill="url(#grid)"
+    stroke="white"
+    stroke-width="2"
+    d="M 139.26953 85.019531 A 40 40 0 0 0 120.99609 106.55273 A 53.333333 53.333333 0 0 0 133.33398 108 A 53.333333 53.333333 0 0 0 142.66406 107.17773 A 70.666667 70.666667 0 0 0 142.66602 106.66602 A 70.666667 70.666667 0 0 0 139.26953 85.019531 z "
+    transform="scale(0.75)"
+    />
+</svg>
