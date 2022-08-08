@@ -75,9 +75,9 @@ export class CvComponent implements OnInit {
             description:
               'Developed various Web, Mobile and Blockchain applications:',
             items: [
+              'Currently developing a Web3 task management app with the ability to display progress by minting on-chain and off-chain NFTs (mnemofy.app) [Solidity/Angular].',
               'Developed a Web app for monitoring daily activities with automatic rating and prediction of daily performance (seshtat.com) [Angular/Ionic/Nodejs].',
               'Implemented a Web and Mobile app for bodyguard booking (1EyeOnU: Uber of bodygards) [Angular/Firebase/Nodejs/Ionic/Maps API].',
-              'Developed a Web3 task management app with the ability to display progress by minting on-chain and off-chain NFTs (mnemosyne.com) [Solidity/Angular].',
               'Landing pages and Web sites developement for various clients via Odesk.',
             ],
           },
@@ -156,7 +156,7 @@ export class CvComponent implements OnInit {
 
     // French
     {
-      title: 'Expert Data et Developpeur Fullstack Web/Mobile/Blockchain',
+      title: 'Expert Data et Developpeur Fullstack Web/Blockchain',
       profile: {
         title: 'Profil',
         content:
@@ -193,11 +193,11 @@ export class CvComponent implements OnInit {
             description:
               "Mise en place de solutions BI d'aide à la decision pour divers clients:",
             items: [
-              "Développement d'une solution générique permettant l'intégration de la suite Qlik à Angular pour la visualisation des données financières (Omnium Finance).",
-              "Supervision d'une équipe (5) dans le developement NLP (avec OCR) pour la détection automatique des changements dans les réglementations EU pour les produits dermocosmétiques (Pierre Fabre).",
-              "Mise en œuvre de projets d'intégration de données semi-structurées de sources multiples à l'aide de Hadoop/Talend pour divers clients (Airbus, Sanofi).",
-              "Conception et mise en œuvre d'applications Salesforce qui s'appuient sur les API REST Talend pour interagir avec les données NoSQL HBase (ProxiServe).",
-              'Mise en place de dashboards de bout en bout (ETL -> Visualisation) utilisant Qlik Sense et Tableau pour divers clients (Sanofi, SNCF, CDC Habitat, Cargo).',
+              "Développement d'une solution générique permettant l'intégration de la suite Qlik à Angular pour la visualisation des données financières.",
+              "Supervision d'une équipe (5) dans le developement NLP (avec OCR) pour la détection automatique des changements dans les réglementations EU pour les produits dermocosmétiques.",
+              "Mise en œuvre de projets d'intégration de données semi-structurées de sources multiples à l'aide de Hadoop/Talend pour divers clients.",
+              "Conception et mise en œuvre d'applications Salesforce qui s'appuient sur les API REST Talend pour interagir avec les données NoSQL HBase.",
+              'Mise en place de dashboards de bout en bout (ETL -> Visualisation) utilisant Qlik Sense et Tableau pour divers clients.',
             ],
           },
           {
@@ -223,9 +223,9 @@ export class CvComponent implements OnInit {
             description:
               "Dévelopement en Freelance d'applications Web/Mobile/Blockchain:",
             items: [
+              "Développement en cours d'une application Web3 de gestion des tâches avec géneration d'NFT (on-chain/off-chain) représentant leur état d'avancement (mnemofy.app) [Solidity/Angular].",
               "Développement d'une app. Web/Mobile pour le suivi des activités journalières avec évaluation automatique de la journée (seshtat.com) [Angular/Ionic/Nodejs].",
               "Implémentation d'une application Web/Mobile pour la réservation de garde du corps (1EyeOnU: Uber of bodygards) [Angular/Firebase/Nodejs/Ionic/Maps API].",
-              "Conception d'une application Web3 de gestion des tâches avec géneration d'NFT (on-chain/off-chain) représentant leur état d'avancement (mnemosyne.com) [Solidity/Angular].",
               'Developement de sites web vitrine ou personnels pour divers client via Odesk.',
             ],
           },

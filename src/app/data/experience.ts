@@ -89,9 +89,9 @@ export const timeline = [
     location: 'Montpellier | France',
     description: 'Developed various Web, Mobile and Blockchain applications:',
     items: [
+      'Currently developping a Web3 task management app with the ability to display progress by minting on-chain and off-chain NFTs (mnemofy.app) [Solidity/Angular].',
       'Developed a Web app for monitoring daily activities with automatic rating and prediction of daily performance (seshtat.com) [Angular/Ionic/Nodejs].',
       'Implemented a Web and Mobile app for bodyguard booking (1EyeOnU: Uber of bodygards) [Angular/Firebase/Nodejs/Ionic/Maps API].',
-      'Developed a Web3 task management app with the ability to display progress by minting on-chain and off-chain NFTs (mnemosyne.com) [Solidity/Angular].',
       'Landing pages and Web sites developement for various clients via Odesk.',
     ],
     skills: [

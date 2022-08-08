@@ -60,7 +60,6 @@
             <div>AWS (S3)</div>
             <div>Java (Spring)</div>
             <div>Typescript (Angular, Ionic)</div>
-            <div>Android (Kotlin)</div>
             <div>Solidity</div>
             <div>Git</div>
             <div>Docker</div>
@@ -119,11 +118,11 @@
     <div>
       <h3>{{ info.education.title }}</h3>
       <div class="block-content" *ngFor="let edu of info.education.edus">
-        <h4 *ngIf="!edu.more">{{ edu.position }}</h4>
-        <div class="title" *ngIf="edu.more">
+        <h4>{{ edu.position }}</h4>
+        <!-- <div class="title" *ngIf="edu.more">
           <h4>{{ edu.position }}</h4>
           <div>{{ edu.more }}</div>
-        </div>
+        </div> -->
         <div class="location-and-time">
           <h5>{{ edu.place }}</h5>
           <div class="time">
